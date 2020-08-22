@@ -7,9 +7,8 @@ def win_draw():
     for i in range(3):
         if len(set(ticks[i])) == 1:
             winner.append(ticks[i][0])
-        for x in range(3):
-            if ticks[0][i] == ticks[1][i] and ticks[1][i] == ticks[2][i]:
-                winner.append(ticks[1][i])
+        if ticks[0][i] == ticks[1][i] and ticks[1][i] == ticks[2][i]:
+            winner.append(ticks[1][i])
     if ticks[0][0] == ticks[1][1] and ticks[1][1] == ticks[2][2]:
         winner.append(ticks[0][0])
     if ticks[0][2] == ticks[1][1] and ticks[1][1] == ticks[2][0]:
